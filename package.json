@@ -34,8 +34,10 @@
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "format": "prettier --write .",
-    "lint": "prettier --check .",
-    "husky": "husky"
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "validate": "npm run format:check && npm run lint && npm run test"
   },
   "husky": {
     "hooks": {
@@ -75,12 +77,12 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "eslint": "^8.57.1",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-storybook": "^0.11.5",
     "husky": "^8.0.3",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "prop-types": "^15.8.1",
     "storybook": "^8.5.8",
     "webpack": "^5.98.0"
